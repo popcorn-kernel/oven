@@ -1,0 +1,2 @@
+# .gitignore - Ignore build artifacts
+build/**
