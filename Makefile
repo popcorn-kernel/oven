@@ -33,18 +33,12 @@ clean:
 	rm -rf $(OUTPUT_DIR)
 
 # Prepare the specified disk for cuteloader installation
-DEVICE_NAME ?= /dev/sdX
+DEVICE_NAME ?= /dev/sdc
 
-.PHONY: ldimg
-
-build/cuteloader.sfd:
-    @echo "Creating sfdisk script for device: $(DEVICE_NAME)"
-    @echo "label: dos" > build/cuteloader.sfd
-    @echo "unit: sectors" >> build/cuteloader.sfd
-    @echo "" >> build/cuteloader.sfd
-    @echo "$(DEVICE_NAME)1 : start=      2048, size=   1469440, type=0C   # FAT32" >> build/cuteloader.sfd
-    @echo "$(DEVICE_NAME)2 : start=   1471488, size=   1469440, type=83   # Linux" >> build/cuteloader.sfd
-    @echo ""
-    @echo "Partition script created. To apply the partitions, run:"
-    @echo "sudo sfdisk $(DEVICE_NAME) < build/cuteloader.sfd"
+ldimg:
+	@echo "Creating sfdisk script for device: $(DEVICE_NAME)"
+	@./cuteloader-sfd.awk -v device_name="$(DEVICE_NAME)" > build/cuteloader.sfd
+	@echo ""
+	@echo "Partition script created. To apply the partitions, run:"
+	@echo "sudo sfdisk $(DEVICE_NAME) < build/cuteloader.sfd"
 
