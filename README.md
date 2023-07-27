@@ -1,5 +1,11 @@
 <div align="center">
+  
 # cuteloader
+
+</div>
+
+<div align="center">
+  
 cuteloader is a simple and customizable bootloader.
 </div>
 
