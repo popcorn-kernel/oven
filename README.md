@@ -1,7 +1,7 @@
-<center>
+<div align="center">
 # cuteloader
 cuteloader is a simple and customizable bootloader.
-</center>
+</div>
 
 ![GitHub forks](https://img.shields.io/github/forks/popcorn-kernel/cuteloader)
 ![GitHub repo size](https://img.shields.io/github/repo-size/popcorn-kernel/cuteloader)
