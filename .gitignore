@@ -1,2 +1,7 @@
 # .gitignore - Ignore build artifacts
 build/**
+
+
+# Added by cargo
+
+/target
