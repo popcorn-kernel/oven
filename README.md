@@ -1,5 +1,7 @@
+<center>
 # cuteloader
 cuteloader is a simple and customizable bootloader.
+</center>
 
 ![GitHub forks](https://img.shields.io/github/forks/popcorn-kernel/cuteloader)
 ![GitHub repo size](https://img.shields.io/github/repo-size/popcorn-kernel/cuteloader)
@@ -7,5 +9,6 @@ cuteloader is a simple and customizable bootloader.
 ![License](https://img.shields.io/github/license/popcorn-kernel/cuteloader)
 
 # Goals
-- Have a simple yet customizable bootloader for better user experince
+- Have a simple yet customizable bootloader for better user experince.
+- Have both, TRANS/popcorn and polyboot systems.
 - Learn and Have fun!
