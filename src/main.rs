@@ -1,9 +1,13 @@
 // main.rs - entry point for the cuteloader
 
 #![no_std]
+#![no_main]
 
+use cortex_m_rt::entry;
 
-fn main() {
+#[entry]
+fn main() -> ! {
+    loop{}
 }
 
 use core::panic::PanicInfo;
