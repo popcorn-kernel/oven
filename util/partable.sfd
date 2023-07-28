@@ -1,0 +1,6 @@
+label: $reclabel_type
+unit: sectors
+
+$device_name"1 : start=$STAGE1_START, size=$STAGE1_SIZE, type=$STAGE1_TYPE   # FAT32
+$device_name"2 : start=$STAGE2_START, size=$STAGE2_SIZE, type=$STAGE2_TYPE   # Linux
+$device_name"3 : start=$PART3_START, size=$PART3_SIZE, type=$PART3_TYPE   # Freely available space
