@@ -19,3 +19,10 @@ cuteloader is a simple and customizable bootloader.
 - Have a simple yet customizable bootloader for better user experince.
 - Have both, TRANS/popcorn and polyboot systems.
 - Learn and Have fun!
+
+# Prerequisites
+- Cargo
+- M4
+- Make
+- any package that provides dd
+- util-linux (for sfdisk)
