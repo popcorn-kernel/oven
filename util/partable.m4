@@ -14,7 +14,7 @@ define(`STAGE1_TYPE', `0C')dnl
 # the stage2 bootloader (and ramdisk images) partition
 define(`STAGE2_START', `1471488')dnl
 define(`STAGE2_SIZE', `1469440')dnl
-define(`STAGE2_TYPE', `83')dnl
+define(`STAGE2_TYPE', `0C')dnl
 
 # Run fdisk to get the device size and capture the output
 define(`FDISK_OUTPUT', `esyscmd(`fdisk -l `device_name)')dnl
@@ -30,4 +30,4 @@ define(`PART3_START', `STAGE2_START + STAGE2_SIZE')dnl
 define(`PART3_SIZE', `DEVICE_SIZE - PART3_START')dnl
 
 # the third partition (freely available space)
-define(`PART3_TYPE', `83')dnl
+define(`PART3_TYPE', `0C')dnl
