@@ -1,0 +1,6 @@
+# .gitattributes - configure Git options
+
+## github-linguist config
+
+*.m4 -linguist-detectable
+# ignore m4 files
