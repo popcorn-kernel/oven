@@ -41,7 +41,7 @@ fn read_disk_sector(buffer: &mut [u8], sector: u32) {
     let dh = 0; // DH = 0 (Head number)
     let dl = 0x80; // DL = 0x80 (Drive number: 0x80 for first hard disk)
 
-    unsafe {
+    unsafe { // invoke the interrupt to read from the disk sector.
         asm!(
             "int 0x13",
             in("ah") ah,
@@ -57,9 +57,11 @@ fn read_disk_sector(buffer: &mut [u8], sector: u32) {
 }
 
 fn fetch_bootable_partitions(sector: u32) {
+    // read the mbr partitioning table
     let mut mbr_buffer: [u8; 512] = [0; 512];
     read_disk_sector(&mut mbr_buffer, sector);
 
+    // fetch the list of bootable partitions
     let mut partition_entries: Vec<PartitionEntry> = Vec::new();
     let mut bootable_parts: Vec<PartitionEntry> = Vec::new();
     for i in 0..4 {
@@ -71,8 +73,8 @@ fn fetch_bootable_partitions(sector: u32) {
 
     for (i, entry) in partition_entries.iter().enumerate() {
         if entry.bootable == 0x80 {
-		bootable_parts.push(entry)
-	}
+		    bootable_parts.push(entry)
+	    }
     }
 
     bootable_parts
