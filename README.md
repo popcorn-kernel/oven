@@ -1,7 +1,7 @@
 <div align="center">
   
-# Oven (formerly known as cuteloader)
-
+# Oven
+(formerly known as cuteloader)
 </div>
 
 <div align="center">
@@ -18,8 +18,8 @@ Oven is a simple and customizable bootloader.
 # Goals
 - Have a simple yet customizable bootloader for better user experince.
 - Have both, TRANS/popcorn and polyboot systems.
+- Implement a boot protocol
 - Learn and Have fun!
-- implement a boot protocol
 
 # Prerequisites
 - Cargo
