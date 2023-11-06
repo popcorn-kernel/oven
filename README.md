@@ -17,7 +17,7 @@ Oven is a simple and customizable bootloader.
 
 # Goals
 - Have a simple yet customizable bootloader for better user experince.
-- Have both, PURE/popcorn and polyboot systems.
+- Have support for both, PURE/popcorn and polyboot systems.
 - Implement a boot protocol
 - Learn and Have fun!
 
